@@ -1,0 +1,25 @@
+{
+  "name": "csv",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "dist/my-element.es.js",
+  "exports": {
+    ".": "./dist/my-element.es.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "csv-parse": "^5.3.1",
+    "lit": "^2.3.1"
+  },
+  "devDependencies": {
+    "vite": "^3.1.0",
+    "vite-plugin-node-polyfills": "^0.4.0"
+  }
+}
