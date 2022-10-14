@@ -5,7 +5,7 @@ import { nodePolyfills } from 'vite-plugin-node-polyfills'
 export default defineConfig({
   build: {
     lib: {
-      entry: 'src/my-element.js',
+      entry: 'src/csv-viewer.js',
       formats: ['es']
     },
     rollupOptions: {

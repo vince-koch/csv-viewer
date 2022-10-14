@@ -2,7 +2,7 @@ import { LitElement, css, html } from 'lit'
 import { ref, createRef } from 'lit/directives/ref.js';
 import { parse } from 'csv-parse';
 
-export class MyElement extends LitElement {
+export class CsvViewerElement extends LitElement {
   static get properties() {
     return {
       records: { type: Object }
@@ -23,14 +23,16 @@ export class MyElement extends LitElement {
   console.info(`render with ${this.records.length} records`)
 
     return html`
-      <h1>CSV Viewer</h1>
-      <a href="https://vitejs.dev/">Vite</a> | <a href="https://lit.dev/">Lit</a> | <a href="https://csv.js.org/parse/">CSV-Parse</a>
+      <div class="topper">
+        <h1>CSV Viewer</h1>
+        <a href="https://vitejs.dev/">Vite</a> | <a href="https://lit.dev/">Lit</a> | <a href="https://csv.js.org/parse/">CSV-Parse</a>
 
-      <div class="card">
-        <form @submit=${this._submit}>
-          <input type="file" accept=".csv" ${ref(this.csvFileRef)} placeholder="CSV File" />
-          <input type="submit" value="Parse" />
-        </form>
+        <div class="card">
+          <form @submit=${this._submit}>
+            <input type="file" accept=".csv" ${ref(this.csvFileRef)} placeholder="CSV File" />
+            <input type="submit" value="Parse" />
+          </form>
+        </div>
       </div>
 
       <table>
@@ -92,9 +94,14 @@ export class MyElement extends LitElement {
   static get styles() {
     return css`
       :host {
-        max-width: 1280px;
+        max-width: 100vw;
         margin: 0 auto;
         padding: 2rem;
+        text-align: center;
+      }
+
+      .topper {
+        width: 100vw;
         text-align: center;
       }
 
@@ -135,7 +142,7 @@ export class MyElement extends LitElement {
         outline: 4px auto -webkit-focus-ring-color;
       }
 
-      table {       
+      table {
         text-align: left;
       }
       table, th, td {
@@ -159,4 +166,4 @@ export class MyElement extends LitElement {
   }
 }
 
-window.customElements.define('my-element', MyElement)
+window.customElements.define('csv-viewer', CsvViewerElement)

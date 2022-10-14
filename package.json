@@ -1,11 +1,11 @@
 {
-  "name": "csv",
+  "name": "csv-viewer",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "main": "dist/my-element.es.js",
+  "main": "dist/csv-viewer.es.js",
   "exports": {
-    ".": "./dist/my-element.es.js"
+    ".": "./dist/csv-viewer.es.js"
   },
   "files": [
     "dist"
