@@ -2,8 +2,8 @@
 
 ### Just a super simple CSV Viewer based on
 * [Vite](https://vitejs.dev/)
-* [Lit](https://lit.dev/)
-* [CSV-Parse](https://csv.js.org/parse/)
+* [React](https://reactjs.org/)
+* [Papa Parse](https://www.papaparse.com/)
 
 ### Screenshot
 ![Screenshot](/docs/screenshot.png?raw=true "Screenshot")
